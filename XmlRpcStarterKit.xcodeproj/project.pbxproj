@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48F6FCF2143ADE53002BF9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F6FCF1143ADE53002BF9BE /* UIKit.framework */; };
+		48F6FCF4143ADE53002BF9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F6FCF3143ADE53002BF9BE /* Foundation.framework */; };
+		48F6FCF6143ADE53002BF9BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F6FCF5143ADE53002BF9BE /* CoreGraphics.framework */; };
+		48F6FCFC143ADE53002BF9BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48F6FCFA143ADE53002BF9BE /* InfoPlist.strings */; };
+		48F6FCFF143ADE53002BF9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FCFE143ADE53002BF9BE /* main.m */; };
+		48F6FD02143ADE53002BF9BE /* XmlRpcStarterKitAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD01143ADE53002BF9BE /* XmlRpcStarterKitAppDelegate.m */; };
+		48F6FD05143ADE53002BF9BE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48F6FD03143ADE53002BF9BE /* MainWindow.xib */; };
+		48F6FD08143ADE53002BF9BE /* XmlRpcStarterKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD07143ADE53002BF9BE /* XmlRpcStarterKitViewController.m */; };
+		48F6FD0B143ADE53002BF9BE /* XmlRpcStarterKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48F6FD09143ADE53002BF9BE /* XmlRpcStarterKitViewController.xib */; };
+		48F6FD2A143ADE6A002BF9BE /* NSString+XMLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD1A143ADE6A002BF9BE /* NSString+XMLExtensions.m */; };
+		48F6FD2B143ADE6A002BF9BE /* XMLRPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD1D143ADE6A002BF9BE /* XMLRPCConnection.m */; };
+		48F6FD2C143ADE6A002BF9BE /* XMLRPCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD1F143ADE6A002BF9BE /* XMLRPCDecoder.m */; };
+		48F6FD2D143ADE6A002BF9BE /* XMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD21143ADE6A002BF9BE /* XMLRPCEncoder.m */; };
+		48F6FD2E143ADE6A002BF9BE /* XMLRPCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD23143ADE6A002BF9BE /* XMLRPCExtensions.m */; };
+		48F6FD2F143ADE6A002BF9BE /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD25143ADE6A002BF9BE /* XMLRPCRequest.m */; };
+		48F6FD30143ADE6A002BF9BE /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD27143ADE6A002BF9BE /* XMLRPCResponse.m */; };
+		48F6FD31143ADE6A002BF9BE /* XMLValueDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD29143ADE6A002BF9BE /* XMLValueDecoder.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		48F6FCED143ADE53002BF9BE /* XmlRpcStarterKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XmlRpcStarterKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F6FCF1143ADE53002BF9BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		48F6FCF3143ADE53002BF9BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		48F6FCF5143ADE53002BF9BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		48F6FCF9143ADE53002BF9BE /* XmlRpcStarterKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XmlRpcStarterKit-Info.plist"; sourceTree = "<group>"; };
+		48F6FCFB143ADE53002BF9BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		48F6FCFD143ADE53002BF9BE /* XmlRpcStarterKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XmlRpcStarterKit-Prefix.pch"; sourceTree = "<group>"; };
+		48F6FCFE143ADE53002BF9BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48F6FD00143ADE53002BF9BE /* XmlRpcStarterKitAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XmlRpcStarterKitAppDelegate.h; sourceTree = "<group>"; };
+		48F6FD01143ADE53002BF9BE /* XmlRpcStarterKitAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XmlRpcStarterKitAppDelegate.m; sourceTree = "<group>"; };
+		48F6FD04143ADE53002BF9BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		48F6FD06143ADE53002BF9BE /* XmlRpcStarterKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XmlRpcStarterKitViewController.h; sourceTree = "<group>"; };
+		48F6FD07143ADE53002BF9BE /* XmlRpcStarterKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XmlRpcStarterKitViewController.m; sourceTree = "<group>"; };
+		48F6FD0A143ADE53002BF9BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/XmlRpcStarterKitViewController.xib; sourceTree = "<group>"; };
+		48F6FD19143ADE6A002BF9BE /* NSString+XMLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLExtensions.h"; sourceTree = "<group>"; };
+		48F6FD1A143ADE6A002BF9BE /* NSString+XMLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLExtensions.m"; sourceTree = "<group>"; };
+		48F6FD1C143ADE6A002BF9BE /* XMLRPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnection.h; sourceTree = "<group>"; };
+		48F6FD1D143ADE6A002BF9BE /* XMLRPCConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCConnection.m; sourceTree = "<group>"; };
+		48F6FD1E143ADE6A002BF9BE /* XMLRPCDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCDecoder.h; sourceTree = "<group>"; };
+		48F6FD1F143ADE6A002BF9BE /* XMLRPCDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCDecoder.m; sourceTree = "<group>"; };
+		48F6FD20143ADE6A002BF9BE /* XMLRPCEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEncoder.h; sourceTree = "<group>"; };
+		48F6FD21143ADE6A002BF9BE /* XMLRPCEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEncoder.m; sourceTree = "<group>"; };
+		48F6FD22143ADE6A002BF9BE /* XMLRPCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCExtensions.h; sourceTree = "<group>"; };
+		48F6FD23143ADE6A002BF9BE /* XMLRPCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCExtensions.m; sourceTree = "<group>"; };
+		48F6FD24143ADE6A002BF9BE /* XMLRPCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCRequest.h; sourceTree = "<group>"; };
+		48F6FD25143ADE6A002BF9BE /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
+		48F6FD26143ADE6A002BF9BE /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
+		48F6FD27143ADE6A002BF9BE /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
+		48F6FD28143ADE6A002BF9BE /* XMLValueDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLValueDecoder.h; sourceTree = "<group>"; };
+		48F6FD29143ADE6A002BF9BE /* XMLValueDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLValueDecoder.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48F6FCEA143ADE53002BF9BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F6FCF2143ADE53002BF9BE /* UIKit.framework in Frameworks */,
+				48F6FCF4143ADE53002BF9BE /* Foundation.framework in Frameworks */,
+				48F6FCF6143ADE53002BF9BE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48F6FCE2143ADE53002BF9BE = {
+			isa = PBXGroup;
+			children = (
+				48F6FCF7143ADE53002BF9BE /* XmlRpcStarterKit */,
+				48F6FCF0143ADE53002BF9BE /* Frameworks */,
+				48F6FCEE143ADE53002BF9BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48F6FCEE143ADE53002BF9BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48F6FCED143ADE53002BF9BE /* XmlRpcStarterKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48F6FCF0143ADE53002BF9BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48F6FCF1143ADE53002BF9BE /* UIKit.framework */,
+				48F6FCF3143ADE53002BF9BE /* Foundation.framework */,
+				48F6FCF5143ADE53002BF9BE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48F6FCF7143ADE53002BF9BE /* XmlRpcStarterKit */ = {
+			isa = PBXGroup;
+			children = (
+				48F6FD33143ADE8C002BF9BE /* Helper Classes */,
+				48F6FD03143ADE53002BF9BE /* MainWindow.xib */,
+				48F6FD06143ADE53002BF9BE /* XmlRpcStarterKitViewController.h */,
+				48F6FD07143ADE53002BF9BE /* XmlRpcStarterKitViewController.m */,
+				48F6FD09143ADE53002BF9BE /* XmlRpcStarterKitViewController.xib */,
+				48F6FCF8143ADE53002BF9BE /* Supporting Files */,
+			);
+			path = XmlRpcStarterKit;
+			sourceTree = "<group>";
+		};
+		48F6FCF8143ADE53002BF9BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48F6FCF9143ADE53002BF9BE /* XmlRpcStarterKit-Info.plist */,
+				48F6FCFA143ADE53002BF9BE /* InfoPlist.strings */,
+				48F6FCFD143ADE53002BF9BE /* XmlRpcStarterKit-Prefix.pch */,
+				48F6FCFE143ADE53002BF9BE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48F6FD1B143ADE6A002BF9BE /* XMLRPC */ = {
+			isa = PBXGroup;
+			children = (
+				48F6FD1C143ADE6A002BF9BE /* XMLRPCConnection.h */,
+				48F6FD1D143ADE6A002BF9BE /* XMLRPCConnection.m */,
+				48F6FD1E143ADE6A002BF9BE /* XMLRPCDecoder.h */,
+				48F6FD1F143ADE6A002BF9BE /* XMLRPCDecoder.m */,
+				48F6FD20143ADE6A002BF9BE /* XMLRPCEncoder.h */,
+				48F6FD21143ADE6A002BF9BE /* XMLRPCEncoder.m */,
+				48F6FD22143ADE6A002BF9BE /* XMLRPCExtensions.h */,
+				48F6FD23143ADE6A002BF9BE /* XMLRPCExtensions.m */,
+				48F6FD24143ADE6A002BF9BE /* XMLRPCRequest.h */,
+				48F6FD25143ADE6A002BF9BE /* XMLRPCRequest.m */,
+				48F6FD26143ADE6A002BF9BE /* XMLRPCResponse.h */,
+				48F6FD27143ADE6A002BF9BE /* XMLRPCResponse.m */,
+				48F6FD28143ADE6A002BF9BE /* XMLValueDecoder.h */,
+				48F6FD29143ADE6A002BF9BE /* XMLValueDecoder.m */,
+			);
+			path = XMLRPC;
+			sourceTree = "<group>";
+		};
+		48F6FD32143ADE7C002BF9BE /* String Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				48F6FD19143ADE6A002BF9BE /* NSString+XMLExtensions.h */,
+				48F6FD1A143ADE6A002BF9BE /* NSString+XMLExtensions.m */,
+			);
+			name = "String Utilities";
+			sourceTree = "<group>";
+		};
+		48F6FD33143ADE8C002BF9BE /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				48F6FD34143ADE9E002BF9BE /* Application Support */,
+				48F6FD32143ADE7C002BF9BE /* String Utilities */,
+				48F6FD1B143ADE6A002BF9BE /* XMLRPC */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		48F6FD34143ADE9E002BF9BE /* Application Support */ = {
+			isa = PBXGroup;
+			children = (
+				48F6FD00143ADE53002BF9BE /* XmlRpcStarterKitAppDelegate.h */,
+				48F6FD01143ADE53002BF9BE /* XmlRpcStarterKitAppDelegate.m */,
+			);
+			name = "Application Support";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48F6FCEC143ADE53002BF9BE /* XmlRpcStarterKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48F6FD0E143ADE53002BF9BE /* Build configuration list for PBXNativeTarget "XmlRpcStarterKit" */;
+			buildPhases = (
+				48F6FCE9143ADE53002BF9BE /* Sources */,
+				48F6FCEA143ADE53002BF9BE /* Frameworks */,
+				48F6FCEB143ADE53002BF9BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XmlRpcStarterKit;
+			productName = XmlRpcStarterKit;
+			productReference = 48F6FCED143ADE53002BF9BE /* XmlRpcStarterKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48F6FCE4143ADE53002BF9BE /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 48F6FCE7143ADE53002BF9BE /* Build configuration list for PBXProject "XmlRpcStarterKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 48F6FCE2143ADE53002BF9BE;
+			productRefGroup = 48F6FCEE143ADE53002BF9BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48F6FCEC143ADE53002BF9BE /* XmlRpcStarterKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48F6FCEB143ADE53002BF9BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F6FCFC143ADE53002BF9BE /* InfoPlist.strings in Resources */,
+				48F6FD05143ADE53002BF9BE /* MainWindow.xib in Resources */,
+				48F6FD0B143ADE53002BF9BE /* XmlRpcStarterKitViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48F6FCE9143ADE53002BF9BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F6FCFF143ADE53002BF9BE /* main.m in Sources */,
+				48F6FD02143ADE53002BF9BE /* XmlRpcStarterKitAppDelegate.m in Sources */,
+				48F6FD08143ADE53002BF9BE /* XmlRpcStarterKitViewController.m in Sources */,
+				48F6FD2A143ADE6A002BF9BE /* NSString+XMLExtensions.m in Sources */,
+				48F6FD2B143ADE6A002BF9BE /* XMLRPCConnection.m in Sources */,
+				48F6FD2C143ADE6A002BF9BE /* XMLRPCDecoder.m in Sources */,
+				48F6FD2D143ADE6A002BF9BE /* XMLRPCEncoder.m in Sources */,
+				48F6FD2E143ADE6A002BF9BE /* XMLRPCExtensions.m in Sources */,
+				48F6FD2F143ADE6A002BF9BE /* XMLRPCRequest.m in Sources */,
+				48F6FD30143ADE6A002BF9BE /* XMLRPCResponse.m in Sources */,
+				48F6FD31143ADE6A002BF9BE /* XMLValueDecoder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		48F6FCFA143ADE53002BF9BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48F6FCFB143ADE53002BF9BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		48F6FD03143ADE53002BF9BE /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48F6FD04143ADE53002BF9BE /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		48F6FD09143ADE53002BF9BE /* XmlRpcStarterKitViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48F6FD0A143ADE53002BF9BE /* en */,
+			);
+			name = XmlRpcStarterKitViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48F6FD0C143ADE53002BF9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48F6FD0D143ADE53002BF9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		48F6FD0F143ADE53002BF9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XmlRpcStarterKit/XmlRpcStarterKit-Prefix.pch";
+				INFOPLIST_FILE = "XmlRpcStarterKit/XmlRpcStarterKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		48F6FD10143ADE53002BF9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XmlRpcStarterKit/XmlRpcStarterKit-Prefix.pch";
+				INFOPLIST_FILE = "XmlRpcStarterKit/XmlRpcStarterKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48F6FCE7143ADE53002BF9BE /* Build configuration list for PBXProject "XmlRpcStarterKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48F6FD0C143ADE53002BF9BE /* Debug */,
+				48F6FD0D143ADE53002BF9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48F6FD0E143ADE53002BF9BE /* Build configuration list for PBXNativeTarget "XmlRpcStarterKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48F6FD0F143ADE53002BF9BE /* Debug */,
+				48F6FD10143ADE53002BF9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48F6FCE4143ADE53002BF9BE /* Project object */;
+}
