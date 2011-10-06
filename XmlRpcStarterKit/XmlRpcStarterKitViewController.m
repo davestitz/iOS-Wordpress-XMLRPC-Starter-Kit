@@ -11,6 +11,7 @@
 #define kWordpressBaseURL @"https://www.company.com/xmlrpc.php"
 #define kWordpressUserName @"email@company.com"
 #define kWordpressPassword @"password"
+#define kWordpressPostID 1
 
 @implementation XmlRpcStarterKitViewController
 
@@ -35,53 +36,71 @@
 #pragma XMLRPC Methods
 //The Hello World of Wordpress XMLRPC web service calls.
 - (IBAction)actionDemoHelloWorld:(id) sender {
-	NSString *server = kWordpressBaseURL;
-	XMLRPCRequest *reqFRC = [[XMLRPCRequest alloc] initWithHost:[NSURL URLWithString:server]];
-	[reqFRC setMethod:@"demo.sayHello" withObjects:[NSArray arrayWithObjects:nil]];
-	
-	//The result for this method is a string so we know to send it into a NSString when making the call.
-    NSString *result = [self executeXMLRPCRequest:reqFRC]; 
-	
-	[reqFRC release]; //Release the request
-	
-    //Basic error checking
-	if( ![result isKindOfClass:[NSString class]] ) //error occured.
-		lblResponse.text=@"error";
-	
-    NSLog(@"demo.sayHello Response: %@", result);
-	lblResponse.text = result;
+	@try {
+        
+        NSString *server = kWordpressBaseURL;
+        XMLRPCRequest *reqFRC = [[XMLRPCRequest alloc] initWithHost:[NSURL URLWithString:server]];
+        [reqFRC setMethod:@"demo.sayHello" withObjects:[NSArray arrayWithObjects:nil]];
+        
+        //The result for this method is a string so we know to send it into a NSString when making the call.
+        NSString *result = [self executeXMLRPCRequest:reqFRC]; 
+        
+        [reqFRC release]; //Release the request
+        
+        //Basic error checking
+        if( ![result isKindOfClass:[NSString class]] ) //error occured.
+            lblResponse.text=@"error";
+        
+        NSLog(@"demo.sayHello Response: %@", result);
+        lblResponse.text = result;
+        
+    }
+    @catch (NSException * e) {
+		NSLog(@"method failed: %@", e);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"  
+                                                        message:@"The Hello World method could not finish successfully. Please check your Wordpress site URL and try again."  
+                                                       delegate:nil  
+                                              cancelButtonTitle:@"OK"  
+                                              otherButtonTitles:nil];  
+        
+        [alert show];
+        [alert release];  
+	}
 }
 
 //XMLRPC call to see if the credentials work properly
 //The Wordpress recomended way to check for a valid user is to call the wp.getUsersBlogs method 
 //and see if 0 or greater is returned.
 - (IBAction)actionAuthenticateUser:(id) sender {
-    NSString *server = kWordpressBaseURL;
     
-    //Call the authenticateUser method below which does the basic work.
-    BOOL authResult = [self authenticateUser:server username:kWordpressUserName password:kWordpressPassword];
-    
-    if (authResult) {
-        NSLog(@"Authenticated");
-        lblResponse.text = @"Authenticated!";
+        NSString *server = kWordpressBaseURL;
         
-    } else {
-        NSLog(@"Bad login or password");
-        lblResponse.text = @"Bad login or password";
-    }
-    
+        //Call the authenticateUser method below which does the basic work.
+        BOOL authResult = [self authenticateUser:server username:kWordpressUserName password:kWordpressPassword];
+        
+        if (authResult) {
+            NSLog(@"Authenticated");
+            lblResponse.text = @"Authenticated!";
+            
+        } else {
+            NSLog(@"Bad login or password");
+            lblResponse.text = @"Bad login or password";
+        }
+        
 }
 
 - (IBAction)actionGetBlogPost:(id) sender {
-    //XMLRPC call to retreive a single post and push the content to a UIWebView
-    NSString *server = kWordpressBaseURL;
-    NSMutableDictionary *returnedPost = [self getPost:server username:kWordpressUserName password:kWordpressPassword];
-    
-    NSString *postDescription = [returnedPost objectForKey:@"description"];
-    NSLog(@"Post Description: %@", postDescription);
-    
-    [descWebView loadHTMLString:postDescription baseURL:nil];
-    descWebView.delegate = self;
+        
+        //XMLRPC call to retreive a single post and push the content to a UIWebView
+        NSString *server = kWordpressBaseURL;
+        NSMutableDictionary *returnedPost = [self getPost:server username:kWordpressUserName password:kWordpressPassword];
+        
+        NSString *postDescription = [returnedPost objectForKey:@"description"];
+        NSLog(@"Post Description: %@", postDescription);
+        
+        [descWebView loadHTMLString:postDescription baseURL:nil];
+        descWebView.delegate = self;
+        
 }
 
 //This method is used by our action above to call the getBlogsForUser to verify the user credentials
@@ -101,8 +120,7 @@
     
 	@try {
         
-        NSMutableArray *args = [NSArray arrayWithObjects:[NSNumber numberWithInt:2880], username, password, nil]; //2880 is a post ID in the system
-        NSString *method = [[[NSString alloc] initWithString:@"metaWeblog.getPost"] autorelease]; // the method
+        NSMutableArray *args = [NSArray arrayWithObjects:[NSNumber numberWithInt:kWordpressPostID], username, password, nil];         NSString *method = [[[NSString alloc] initWithString:@"metaWeblog.getPost"] autorelease]; // the method
         XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithHost:[NSURL URLWithString:server]];
         [request setMethod:method withObjects:args];
         
@@ -191,12 +209,12 @@
 #pragma mark - View lifecycle
 
 /*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
+ // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+ - (void)viewDidLoad
+ {
+ [super viewDidLoad];
+ }
+ */
 
 - (void)viewDidUnload
 {
