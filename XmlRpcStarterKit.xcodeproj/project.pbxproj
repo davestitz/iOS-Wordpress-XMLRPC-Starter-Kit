@@ -58,7 +58,7 @@
 		48F6FD27143ADE6A002BF9BE /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
 		48F6FD28143ADE6A002BF9BE /* XMLValueDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLValueDecoder.h; sourceTree = "<group>"; };
 		48F6FD29143ADE6A002BF9BE /* XMLValueDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLValueDecoder.m; sourceTree = "<group>"; };
-		6B604B951C042F2400DCADD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6B604B951C042F2400DCADD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,6 @@
 		48F6FCE2143ADE53002BF9BE = {
 			isa = PBXGroup;
 			children = (
-				6B604B951C042F2400DCADD8 /* Default-568h@2x.png */,
 				48F6FCF7143ADE53002BF9BE /* XmlRpcStarterKit */,
 				48F6FCF0143ADE53002BF9BE /* Frameworks */,
 				48F6FCEE143ADE53002BF9BE /* Products */,
@@ -106,6 +105,7 @@
 		48F6FCF7143ADE53002BF9BE /* XmlRpcStarterKit */ = {
 			isa = PBXGroup;
 			children = (
+				6B604B951C042F2400DCADD8 /* Default-568h@2x.png */,
 				48F6FD33143ADE8C002BF9BE /* Helper Classes */,
 				48F6FD03143ADE53002BF9BE /* MainWindow.xib */,
 				48F6FD06143ADE53002BF9BE /* XmlRpcStarterKitViewController.h */,
