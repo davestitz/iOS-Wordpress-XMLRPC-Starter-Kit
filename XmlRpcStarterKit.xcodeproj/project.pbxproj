@@ -24,6 +24,7 @@
 		48F6FD2F143ADE6A002BF9BE /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD25143ADE6A002BF9BE /* XMLRPCRequest.m */; };
 		48F6FD30143ADE6A002BF9BE /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD27143ADE6A002BF9BE /* XMLRPCResponse.m */; };
 		48F6FD31143ADE6A002BF9BE /* XMLValueDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F6FD29143ADE6A002BF9BE /* XMLValueDecoder.m */; };
+		6B604B961C042F2500DCADD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B604B951C042F2400DCADD8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		48F6FD27143ADE6A002BF9BE /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
 		48F6FD28143ADE6A002BF9BE /* XMLValueDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLValueDecoder.h; sourceTree = "<group>"; };
 		48F6FD29143ADE6A002BF9BE /* XMLValueDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLValueDecoder.m; sourceTree = "<group>"; };
+		6B604B951C042F2400DCADD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		48F6FCE2143ADE53002BF9BE = {
 			isa = PBXGroup;
 			children = (
+				6B604B951C042F2400DCADD8 /* Default-568h@2x.png */,
 				48F6FCF7143ADE53002BF9BE /* XmlRpcStarterKit */,
 				48F6FCF0143ADE53002BF9BE /* Frameworks */,
 				48F6FCEE143ADE53002BF9BE /* Products */,
@@ -198,6 +201,14 @@
 /* Begin PBXProject section */
 		48F6FCE4143ADE53002BF9BE /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				TargetAttributes = {
+					48F6FCEC143ADE53002BF9BE = {
+						DevelopmentTeam = W2895NU8QA;
+					};
+				};
+			};
 			buildConfigurationList = 48F6FCE7143ADE53002BF9BE /* Build configuration list for PBXProject "XmlRpcStarterKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -221,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48F6FCFC143ADE53002BF9BE /* InfoPlist.strings in Resources */,
+				6B604B961C042F2500DCADD8 /* Default-568h@2x.png in Resources */,
 				48F6FD05143ADE53002BF9BE /* MainWindow.xib in Resources */,
 				48F6FD0B143ADE53002BF9BE /* XmlRpcStarterKitViewController.xib in Resources */,
 			);
@@ -280,8 +292,8 @@
 		48F6FD0C143ADE53002BF9BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -290,6 +302,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -297,7 +310,6 @@
 		48F6FD0D143ADE53002BF9BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -313,12 +325,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XmlRpcStarterKit/XmlRpcStarterKit-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "XmlRpcStarterKit/XmlRpcStarterKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.company.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -327,11 +344,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XmlRpcStarterKit/XmlRpcStarterKit-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "XmlRpcStarterKit/XmlRpcStarterKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.company.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -356,6 +378,7 @@
 				48F6FD10143ADE53002BF9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

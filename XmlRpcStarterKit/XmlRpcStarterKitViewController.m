@@ -3,14 +3,14 @@
 //  XmlRpcStarterKit
 //
 //  Created by Stitz on 10/4/11.
-//  Copyright 2011 Stitz. All rights reserved.
+//  Copyright 2015 Stitz. All rights reserved.
 //
 
 #import "XmlRpcStarterKitViewController.h"
 
-#define kWordpressBaseURL @"https://www.company.com/xmlrpc.php"
-#define kWordpressUserName @"email@company.com"
-#define kWordpressPassword @"password"
+#define kWordpressBaseURL @"http://www.domain.com/xmlrpc.php"
+#define kWordpressUserName @"yourUsername"
+#define kWordpressPassword @"yourPassword"
 #define kWordpressPostID 1
 
 @implementation XmlRpcStarterKitViewController
@@ -40,7 +40,11 @@
         
         NSString *server = kWordpressBaseURL;
         XMLRPCRequest *reqFRC = [[XMLRPCRequest alloc] initWithHost:[NSURL URLWithString:server]];
-        [reqFRC setMethod:@"demo.sayHello" withObjects:[NSArray arrayWithObjects:nil]];
+        
+        //No arguments to pass so the array is empty. See getPost for an example with data.
+        NSMutableArray *args = [[NSMutableArray alloc] init];
+        
+        [reqFRC setMethod:@"demo.sayHello" withObjects:args];
         
         //The result for this method is a string so we know to send it into a NSString when making the call.
         NSString *result = [self executeXMLRPCRequest:reqFRC]; 
@@ -119,8 +123,7 @@
     NSString *server = xmlrpcServer;
     
 	@try {
-        
-        NSMutableArray *args = [NSArray arrayWithObjects:[NSNumber numberWithInt:kWordpressPostID], username, password, nil];         NSString *method = [[[NSString alloc] initWithString:@"metaWeblog.getPost"] autorelease]; // the method
+        NSMutableArray *args = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:kWordpressPostID], username, password, nil]; NSString *method = [[[NSString alloc] initWithString:@"metaWeblog.getPost"] autorelease]; // the method
         XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithHost:[NSURL URLWithString:server]];
         [request setMethod:method withObjects:args];
         
@@ -173,7 +176,7 @@
 		
 		if([usersBlogsData isKindOfClass:[NSArray class]]) {
             [usersBlogs release];
-            usersBlogs = [NSArray arrayWithArray:usersBlogsData];
+            usersBlogs = [NSMutableArray arrayWithArray:usersBlogsData];
 		}
 		else if([usersBlogsData isKindOfClass:[NSError class]]) {
 			self.error = (NSError *)usersBlogsData;
@@ -181,6 +184,9 @@
 			
 			usersBlogs = nil;
 			
+            
+            
+            
 			if([errorMessage isEqualToString:@"The operation couldn’t be completed. (NSXMLParserErrorDomain error 4.)"])
 				errorMessage = @"Your blog's XML-RPC endpoint was found but it isn't communicating properly. Try disabling plugins or contacting your host.";
             

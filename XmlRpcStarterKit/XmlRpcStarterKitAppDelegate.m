@@ -3,7 +3,7 @@
 //  XmlRpcStarterKit
 //
 //  Created by Stitz on 10/4/11.
-//  Copyright 2011 Stitz. All rights reserved.
+//  Copyright 2015 Stitz. All rights reserved.
 //
 
 #import "XmlRpcStarterKitAppDelegate.h"

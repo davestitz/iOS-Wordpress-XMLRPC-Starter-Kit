@@ -314,14 +314,14 @@
 //		timeZone: nil locale: nil];
 
 	NSCalendar *cal = [NSCalendar currentCalendar];	
-	NSDateComponents *comps = [cal components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit
+	NSDateComponents *comps = [cal components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond
 																	 fromDate:date];
 	
-	NSString *month = [NSString stringWithFormat:@"%d",[comps month]];
-	NSString *day = [NSString stringWithFormat:@"%d",[comps day]];
-	NSString *hour = [NSString stringWithFormat:@"%d",[comps hour]];
-	NSString *minute = [NSString stringWithFormat:@"%d",[comps minute]];
-	NSString *second = [NSString stringWithFormat:@"%d",[comps second]];
+	NSString *month = [NSString stringWithFormat:@"%ld",(long)[comps month]];
+	NSString *day = [NSString stringWithFormat:@"%ld",(long)[comps day]];
+	NSString *hour = [NSString stringWithFormat:@"%ld",(long)[comps hour]];
+	NSString *minute = [NSString stringWithFormat:@"%ld",(long)[comps minute]];
+	NSString *second = [NSString stringWithFormat:@"%ld",(long)[comps second]];
 
 	if ([month length] == 1)	month = [NSString stringWithFormat:@"0%@",month];	
 	if ([day length] == 1)	day = [NSString stringWithFormat:@"0%@",day];
@@ -329,7 +329,7 @@
 	if ([minute length] == 1)	minute = [NSString stringWithFormat:@"0%@",minute];
 	if ([second length] == 1)	second = [NSString stringWithFormat:@"0%@",second];
 	
-	NSString *buffer = [NSString stringWithFormat:@"%d%@%@T%@:%@:%@", [comps year]	,month	,day		,hour	,minute,second];
+	NSString *buffer = [NSString stringWithFormat:@"%ld%@%@T%@:%@:%@", (long)[comps year],month,day,hour,minute,second];
 	
 	
 	return [self valueTag: @"dateTime.iso8601" value: buffer];
